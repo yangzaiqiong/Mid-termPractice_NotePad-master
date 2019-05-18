@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TextColorEditor"
+    tools:showIn="@layout/text_color_editor">
+
+    <TextView
+        android:id="@+id/editSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:gravity="center"
+        android:text="-------------set text size------------------------------------------"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sizes"
+        android:layout_width="118dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginRight="242dp"
+        android:entries="@array/text_size_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSize">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/editColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:gravity="center"
+        android:text="-------------set text color-----------------------------------------"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizes" />
+
+    <Button
+        android:id="@+id/blue"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:background="#00FFCC"
+        android:onClick="turnBlue"
+        android:text="blue"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/white" />
+
+    <Button
+        android:id="@+id/white"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:background="#FFFFFF"
+        android:onClick="turnWhite"
+        android:text="white"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editColor" />
+
+    <Button
+        android:id="@+id/black"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:background="#000000"
+        android:onClick="turnBlack"
+        android:text="black"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editColor" />
+
+    <Button
+        android:id="@+id/yellow"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:background="#FFFF00"
+        android:onClick="turnYellow"
+        android:text="yellow"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/pink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blue" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:background="#FF0000"
+        android:onClick="turnRed"
+        android:text="red"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/black" />
+
+    <Button
+        android:id="@+id/pink"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:background="#FF3399"
+        android:onClick="turnPink"
+        android:text="pink"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/red" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="184dp"
+        android:background="#CCCC33"
+        android:onClick="onClickSaveChange"
+        android:text="save changes"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yellow" />
+
+</android.support.constraint.ConstraintLayout>
